@@ -6,7 +6,6 @@ from datetime import datetime
 
 # Read in the gene_info.gz zipped file in batches.
 # NOTE: Due to this being a large file, this may take some time.
-
 print("(1/4) Reading in gene_info.gz...")
 iter_gene_info = pd.read_csv(
     "https://ftp.ncbi.nlm.nih.gov/gene/DATA/gene_info.gz", 
@@ -44,7 +43,6 @@ result = pd.merge(
 
 # Write the dataframe.
 print("(4/4) Writing the dataframe...")
-
 current_time = datetime.now().strftime('%Y-%b-%d_%H:%M:%S')
 if not os.path.exists("./outputs"):
     os.mkdir("outputs")
